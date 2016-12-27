@@ -34,8 +34,12 @@ interface IGlobalService {
     setZoomButtonClicked(value: boolean): void;
     getIsBeheerder(): any;
     setIsBeheerder(value: boolean): void;
+    setUserRole(value: string): void;
+    getUserRole(): string;
     getAfterSelectFunction(): any;
     setAfterSelectFunction(value: (data: any, event?: any) => void): void;
+    reloadMap(): void;
+    refreshImageLayers(): void;
 }
 
 interface IInteractionService {
@@ -46,10 +50,11 @@ interface IInteractionService {
     enableMeasureLineMode(): void;
     enableMeasureAreaMode(): void;
     switchOverviewMap(): void;
-    startSelect(afterSelect?: (data: any, event?: any) => void, selectType?: string): void;
+    startSelect(afterSelect?: (data: any, event?: any) => void, selectType?: string, limitedLayers?: string): void;
     startAnnotate(type: string): void;
     clearAnnotations(): void;
     getEnabledInteractions(): any;
+    StartPlacement(type: ol.geom.GeometryType, afterPlace: (feature: ol.Feature) => void): void;
 }
 
 interface ILogOnService {
@@ -61,7 +66,15 @@ interface IDatapanelService {
     getIsLoading(): any;
     openPanel: (data: any, event: any) => void;
     closePanel(): void;
-    loadPanel(url: string, previous?: any): void;
-    savePanel(saveLocation: string, saveData: any): void;
+    loadPanel(data: any, previous?: any, feature?: ol.Feature): void;
+    savePanel(saveLocation: string, saveData: any, isNew: boolean): void;
     getAssetsApiUrl(): string;
+    addHighlight(feat: ol.Feature): void;
+    deleteObject(deleteLocation: string): void;
+}
+
+interface IObjectAdminService {
+    addObject(objectName: string, objectType: ol.geom.GeometryType): void;
+    moveObject(objectName: string, objectType: ol.geom.GeometryType): void;
+    confirmDeleteObject(objectName: string): void;
 }
