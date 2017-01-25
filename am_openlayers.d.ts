@@ -78,3 +78,7 @@ interface IObjectAdminService {
     moveObject(objectName: string, objectType: ol.geom.GeometryType): void;
     confirmDeleteObject(objectName: string): void;
 }
+
+interface ITooltipService {
+    initialize(): void;
+}
