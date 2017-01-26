@@ -82,3 +82,40 @@ interface IObjectAdminService {
 interface ITooltipService {
     initialize(): void;
 }
+
+interface IHighlightService {
+    InitializeSelectionLayers(): void;
+    InitializeSearchLayers(): void;
+    InitializeRoadSearchLayers(): void;
+    AddSelection(feature: ol.Feature): void;
+    AddSearch(feature: ol.Feature): void;
+    AddRoadSearchResult(features: Array<ol.Feature>): void;
+    AddRoadSearchSelection(feature: ol.Feature): void;
+    AddRoadSearchMarker(feature: ol.Feature): void;
+    ClearSelection(): void;
+    ClearSearch(): void;
+    ClearRoadSearch(): void
+    ClearRoadSearchResult(): void;
+    ClearRoadSearchSelection(): void;
+    ClearRoadSearchMarker(): void;
+    RemoveRoadSearchSelection(feature: ol.Feature): void;
+    RemoveRoadSearchMarker(feature: ol.Feature): void;
+    ShowSelection(): void;
+    ShowSearch(): void;
+    ShowRoadSearch(): void;
+    ShowRoadSearchResult(): void;
+    ShowRoadSearchSelection(): void;
+    ShowRoadSearchMarker(): void;
+    HideSelection(): void;
+    HideSearch(): void;
+    HideRoadSearch(): void;
+    HideRoadSearchResult(): void;
+    HideRoadSearchSelection(): void;
+    HideRoadSearchMarker(): void;
+}
+
+interface ILoaderService {
+    getProcesses(): any;
+    addProcess(name: string, text: string): void;
+    removeProcess(name: string): void;
+}
