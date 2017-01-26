@@ -119,3 +119,18 @@ interface ILoaderService {
     addProcess(name: string, text: string): void;
     removeProcess(name: string): void;
 }
+
+interface ILayerStyleService {
+    getInteractionStyle(): any;
+    getAnnotationStyle(): any;
+    getAnnotationTextStyle(): any;
+    getDrawingStyle(): any;
+    getMeasureStyle(): any;
+    getHighlightSelectionStyle(): any;
+    getHighlightTableStyle(): any;
+    getHighlightSelectionActivationStyle(): any;
+    getMarkerSelectStartStyle(): any;
+    getMarkerSelectEndStyle(): any;
+    getMarkerNearestPointStartStyle(): any;
+    getMarkerNearestPointEndStyle(): any;
+}
