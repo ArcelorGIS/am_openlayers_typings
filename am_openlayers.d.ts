@@ -134,3 +134,9 @@ interface ILayerStyleService {
     getMarkerNearestPointStartStyle(): any;
     getMarkerNearestPointEndStyle(): any;
 }
+
+interface IReportService {
+    getItemSets(): Array<any>;
+    startReport(layers: string): void;
+    printReport(): void;
+}
