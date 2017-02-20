@@ -140,3 +140,8 @@ interface IReportService {
     startReport(layers: string): void;
     printReport(): void;
 }
+
+interface IPrintService {
+    printMap(): void;
+    printPane(paneId: string): void;
+}
