@@ -145,3 +145,6 @@ interface IPrintService {
     printMap(): void;
     printPane(paneId: string): void;
 }
+interface IPopupService {
+    openPopup(dataLocation: string, template: string, controllerName: string): void;
+}
