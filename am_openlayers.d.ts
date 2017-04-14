@@ -148,6 +148,11 @@ interface IPrintService {
 interface IPopupService {
     openPopup(dataLocation: string, template: string, controllerName: string): void;
 }
+interface ITranslationService {
+    getAllTranslations(): Array<any>;
+    getTranslation(id: string, language: string): string;
+    addTranslations(application: string, translations: Array<any>): void;
+}
 interface ICoordinateConversionService {
     fromLambertToSID(coordinates: [number, number]): [number, number];
     fromSIDToLambert(coordinates: [number, number]): [number, number];
