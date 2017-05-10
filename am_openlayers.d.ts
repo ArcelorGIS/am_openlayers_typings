@@ -13,6 +13,7 @@ declare class AppConfig {
     urldijkstraservice: string;
     urlAssetsApi: string;
     urlmapguideservice: string;
+    urlGISHome: string;
 }
 
 interface IGlobalService {
