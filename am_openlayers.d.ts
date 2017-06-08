@@ -39,6 +39,8 @@ interface IGlobalService {
     getUserRole(): string;
     getAfterSelectFunction(): any;
     setAfterSelectFunction(value: (data: any, event?: any) => void): void;
+    getAfterApplicationLoadfunction(): any;
+    setAfterApplicationLoadfunction(value: (data: any, event?: any) => void): void;
     reloadMap(): void;
     refreshImageLayers(): void;
 }
