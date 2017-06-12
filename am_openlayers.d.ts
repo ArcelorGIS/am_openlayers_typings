@@ -160,3 +160,6 @@ interface ICoordinateConversionService {
     fromLambertToSID(coordinates: [number, number]): [number, number];
     fromSIDToLambert(coordinates: [number, number]): [number, number];
 }
+interface IMapFilterService {
+    applyFilter(layer: string, filter: string): void;
+}
