@@ -163,3 +163,9 @@ interface ICoordinateConversionService {
 interface IMapFilterService {
     applyFilter(layer: string, filter: string): void;
 }
+
+interface ILayerFilterService {
+    AddFilterData(layer: string): void;
+    GetFilterData(): any;
+    ApplyFilters(): void;
+}
