@@ -43,6 +43,8 @@ interface IGlobalService {
     setAfterApplicationLoadfunction(value: (data: any, event?: any) => void): void;
     reloadMap(): void;
     refreshImageLayers(): void;
+    getReportableLayers(): string;
+    getMoveableLayers(): string;
 }
 
 interface IInteractionService {
