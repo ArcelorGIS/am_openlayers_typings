@@ -143,6 +143,8 @@ interface ILayerStyleService {
 interface IReportService {
     getItemSets(): Array<any>;
     startReport(layers: string): void;
+    startReports(layers: string): void;
+    openReport(layer: string, ids: Array<string>): void;
     printReport(): void;
 }
 
