@@ -1,20 +1,20 @@
 ﻿//Definitions for am_openlayers module
 
-// declare class XmlConfig {
-    // app: AppConfig;
-// }
+declare class XmlConfig {
+    app: AppConfig;
+}
 
-// declare class AppConfig {
-    // api: string;
-    // gis: string;
-    // urlmapserver: string;
-    // urlapplicatieconfigwebapi: string;
-    // urlgeorest: string;
-    // urldijkstraservice: string;
-    // urlAssetsApi: string;
-    // urlmapguideservice: string;
-    // urlGISHome: string;
-// }
+declare class AppConfig {
+    api: string;
+    gis: string;
+    urlmapserver: string;
+    urlapplicatieconfigwebapi: string;
+    urlgeorest: string;
+    urldijkstraservice: string;
+    urlAssetsApi: string;
+    urlmapguideservice: string;
+    urlGISHome: string;
+}
 
 interface IGlobalService {
     setApplicationName(name: string): void;
