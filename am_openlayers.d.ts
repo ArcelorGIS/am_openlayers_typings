@@ -16,6 +16,21 @@ declare class AppConfig {
     urlGISHome: string;
 }
 
+interface IDataTableService {
+    getTabs(): Array<Tab>;
+    getTab(tabName: string): Tab;
+    addTab(name: string, actionsEnabled?: boolean): void;
+    getHeaders(tab: string): Array<Header>;
+    addHeader(name: string, tab: string): void;
+    getLines(tab: string): Array<Line>;
+    addLine(line: any, tab: string): void;
+    deleteLine(tabName: string, lineId: number): void;
+    selectLine(tabName: string, lineId: number): void;
+    closeTab(tabName: string);
+    deleteSelectedRows(): void;
+    zoomToRow(tabName: string, lineId: number): void;
+}
+
 interface IGlobalService {
     setApplicationName(name: string): void;
     getApplicationName(): string;
