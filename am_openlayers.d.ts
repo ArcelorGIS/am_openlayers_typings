@@ -17,12 +17,12 @@ declare class AppConfig {
 }
 
 interface IDataTableService {
-    getTabs(): Array<Tab>;
-    getTab(tabName: string): Tab;
+    getTabs(): Array<any>;
+    getTab(tabName: string): any;
     addTab(name: string, actionsEnabled?: boolean): void;
-    getHeaders(tab: string): Array<Header>;
+    getHeaders(tab: string): Array<any>;
     addHeader(name: string, tab: string): void;
-    getLines(tab: string): Array<Line>;
+    getLines(tab: string): Array<any>;
     addLine(line: any, tab: string): void;
     deleteLine(tabName: string, lineId: number): void;
     selectLine(tabName: string, lineId: number): void;
