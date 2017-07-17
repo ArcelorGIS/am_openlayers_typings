@@ -58,6 +58,7 @@ interface IGlobalService {
     setAfterApplicationLoadfunction(value: (data: any, event?: any) => void): void;
     reloadMap(): void;
     refreshImageLayers(): void;
+	refreshImageLayers(layer: string): void;
     getReportableLayers(): string;
     getMoveableLayers(): string;
 }
