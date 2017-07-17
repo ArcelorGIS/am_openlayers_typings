@@ -97,6 +97,7 @@ interface IDatapanelService {
 
 interface IObjectAdminService {
     addObject(objectName: string, objectType: ol.geom.GeometryType): void;
+	addCoordsForExistingObject(objectName: string, objectId: string, objectType: ol.geom.GeometryType): void;
     moveObject(objectName: string, objectType: ol.geom.GeometryType): void;
     confirmDeleteObject(objectName: string): void;
 }
