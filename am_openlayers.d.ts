@@ -199,3 +199,8 @@ interface IDetailsScreenService {
     getTemplate(): any;
     setTemplate(value: string): void;
 }
+
+interface IHelperService {
+    isNullOrUndefined(value: any): boolean;
+    handleMapGuideJSON(mapguideJson: Array<any>): Array<ol.Feature>;
+}
