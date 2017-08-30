@@ -58,7 +58,7 @@ interface IGlobalService {
     setAfterApplicationLoadfunction(value: (data: any, event?: any) => void): void;
     reloadMap(): void;
     refreshImageLayers(): void;
-	refreshImageLayer(layer: string): void;
+    refreshImageLayer(layer: string): void;
     getReportableLayers(): string;
     getMoveableLayers(): string;
 }
@@ -98,7 +98,7 @@ interface IDatapanelService {
 
 interface IObjectAdminService {
     addObject(objectName: string, objectType: ol.geom.GeometryType): void;
-	addCoordsForExistingObject(objectName: string, objectId: string, objectType: ol.geom.GeometryType): void;
+    addCoordsForExistingObject(objectName: string, objectId: string, objectType: ol.geom.GeometryType): void;
     moveObject(objectName: string, objectType: ol.geom.GeometryType): void;
     confirmDeleteObject(objectName: string): void;
 }
@@ -191,4 +191,11 @@ interface ILayerFilterService {
     AddFilterData(layer: string): void;
     GetFilterData(): any;
     ApplyFilters(): void;
+}
+
+interface IDetailsScreenService {
+    getVisible(): any;
+    setVisible(value: boolean): void;
+    getTemplate(): any;
+    setTemplate(value: string): void;
 }
