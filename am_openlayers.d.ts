@@ -182,6 +182,7 @@ interface ITranslationService {
 interface ICoordinateConversionService {
     fromLambertToSID(coordinates: [number, number]): [number, number];
     fromSIDToLambert(coordinates: [number, number]): [number, number];
+    fromETRS89ToSID(coordinates: [number, number,number, number,number,number]): [number, number];
 }
 interface IMapFilterService {
     applyFilter(layer: string, filter: string): void;
