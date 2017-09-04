@@ -50,8 +50,8 @@ interface IGlobalService {
     setZoomButtonClicked(value: boolean): void;
     getIsBeheerder(): any;
     setIsBeheerder(value: boolean): void;
-    setUserRole(value: string): void;
-    getUserRole(): string;
+    setUserRoles(value: string[]): void;
+    getUserRoles(): string[];
     getAfterSelectFunction(): any;
     setAfterSelectFunction(value: (data: any, event?: any) => void): void;
     getAfterApplicationLoadfunction(): any;
