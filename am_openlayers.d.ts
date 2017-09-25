@@ -205,3 +205,8 @@ interface IHelperService {
     isNullOrUndefined(value: any): boolean;
     handleMapGuideJSON(mapguideJson: Array<any>): Array<ol.Feature>;
 }
+
+interface IExportService {
+    GetTableHeaders(type: string): any;
+    ExportTable(type: string, headers: any, ids: any): any;
+}
