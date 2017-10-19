@@ -110,6 +110,22 @@ interface ITooltipService {
     initialize(): void;
 }
 
+interface ISearchService {
+        getSearchText(): any;
+        getSearchValues(): any;
+        getLayers(): Array<any>;
+        getLayerProperties(): void;
+        getSearchValueData(): any;
+        updateValues(): void;
+        getValues(): ng.IHttpPromise<Array<any>>;
+        search(): void;
+        cancelSearch(): void;
+        getMessages(): any;
+        clearMessages(): void;
+        resetAttributes(): void;
+        setSearchValue(value: any): void;
+    }
+
 interface IHighlightService {
     InitializeSelectionLayers(): void;
     InitializeSearchLayers(): void;
