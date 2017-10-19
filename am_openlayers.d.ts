@@ -94,6 +94,9 @@ interface IDatapanelService {
     getAssetsApiUrl(): string;
     addHighlight(feat: ol.Feature): void;
     deleteObject(deleteLocation: string): void;
+    zoomTo(field: any, zoomData?: any): void;
+    reloadPrevious(): void;
+    setMessage(message: string): void;
 }
 
 interface IObjectAdminService {
