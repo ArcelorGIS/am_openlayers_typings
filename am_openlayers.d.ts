@@ -111,20 +111,20 @@ interface ITooltipService {
 }
 
 interface ISearchService {
-        getSearchText(): any;
-        getSearchValues(): any;
-        getLayers(): Array<any>;
-        getLayerProperties(): void;
-        getSearchValueData(): any;
-        updateValues(): void;
-        getValues(): ng.IHttpPromise<Array<any>>;
-        search(): void;
-        cancelSearch(): void;
-        getMessages(): any;
-        clearMessages(): void;
-        resetAttributes(): void;
-        setSearchValue(value: any): void;
-    }
+    getSearchText(): any;
+    getSearchValues(): any;
+    getLayers(): Array<any>;
+    getLayerProperties(): void;
+    getSearchValueData(): any;
+    updateValues(): void;
+    getValues(): ng.IHttpPromise<Array<any>>;
+    search(): void;
+    cancelSearch(): void;
+    getMessages(): any;
+    clearMessages(): void;
+    resetAttributes(): void;
+    setSearchValue(value: any): void;
+}
 
 interface IHighlightService {
     InitializeSelectionLayers(): void;
@@ -201,7 +201,7 @@ interface ITranslationService {
 interface ICoordinateConversionService {
     fromLambertToSID(coordinates: [number, number]): [number, number];
     fromSIDToLambert(coordinates: [number, number]): [number, number];
-    fromETRS89ToSID(coordinates: [number, number,number, number,number,number]): [number, number];
+    fromETRS89ToSID(coordinates: [number, number, number, number, number, number]): [number, number];
 }
 interface IMapFilterService {
     applyFilter(layer: string, filter: string): void;
@@ -228,4 +228,35 @@ interface IHelperService {
 interface IExportService {
     GetTableHeaders(type: string): any;
     ExportTable(type: string, headers: any, ids: any): any;
+}
+
+interface IGeometryService {
+    getWKTFromFeature(feature): any;
+    getFeatureFromWKT(WKT: string, projection?: string): any;
+    getWKTFromGeometry(Geom: any): any;
+}
+
+interface IZoomService {
+    zoomTo(mapId: string, scale: number): void;
+    zoomToUserView(mapId, userview: UserView): void;
+    zoomToExtent(mapId, extent, isDataPanel?): void;
+}
+
+interface ISelectService {
+    startSelect(enabledInteractions: Array<any>, afterSelect?: (data: any, event?: any) => void, selectType?: string, limitedLayers?: string): void;
+    startDragSelect(enabledInteractions: Array<any>, afterSelect: (data: any, event?: any) => void, limitedLayers: string): void;
+    getLatestSelection(): any;
+    setLatestSelectionPanel(panel: any): void;
+    setLatestSelectionData(data: any): void;
+    clearSelectionPanel(): void;
+}
+
+export class Center {
+    X: number;
+    Y: number;
+}
+
+export class UserView {
+    Center: Center;
+    Scale: number;
 }
