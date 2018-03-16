@@ -239,7 +239,7 @@ interface IGeometryService {
 
 interface IZoomService {
     zoomTo(mapId: string, scale: number): void;
-    zoomToUserView(mapId, userview: UserView): void;
+    zoomToUserView(mapId, userview: any): void;
     zoomToExtent(mapId, extent, isDataPanel?): void;
 }
 
