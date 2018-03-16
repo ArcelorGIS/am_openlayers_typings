@@ -251,13 +251,3 @@ interface ISelectService {
     setLatestSelectionData(data: any): void;
     clearSelectionPanel(): void;
 }
-
-export class Center {
-    X: number;
-    Y: number;
-}
-
-export class UserView {
-    Center: Center;
-    Scale: number;
-}
