@@ -211,6 +211,7 @@ interface ILayerFilterService {
     AddFilterData(layer: string): void;
     GetFilterData(): any;
     ApplyFilters(): void;
+    AddFilterDataWithRemove(layer: string): void;
 }
 
 interface IDetailsScreenService {
