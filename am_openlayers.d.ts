@@ -51,7 +51,9 @@ interface IGlobalService {
     getIsBeheerder(): any;
     setIsBeheerder(value: boolean): void;
     setUserRoles(value: string[]): void;
+    setUserName(value: string): void;
     getUserRoles(): string[];
+    getUserName(): string;
     getAfterSelectFunction(): any;
     setAfterSelectFunction(value: (data: any, event?: any) => void): void;
     getAfterApplicationLoadfunction(): any;
