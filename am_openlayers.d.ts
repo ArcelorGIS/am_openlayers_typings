@@ -121,6 +121,7 @@ interface ISearchService {
     updateValues(): void;
     getValues(): ng.IHttpPromise<Array<any>>;
     search(): void;
+    searchOnlyHighlight(): void;
     cancelSearch(): void;
     getMessages(): any;
     clearMessages(): void;
