@@ -58,6 +58,7 @@ interface IGlobalService {
     setAfterSelectFunction(value: (data: any, event?: any) => void): void;
     getAfterApplicationLoadfunction(): any;
     setAfterApplicationLoadfunction(value: (data: any, event?: any) => void): void;
+    switchSidePanelsOff(): void;
     reloadMap(): void;
     refreshImageLayers(): void;
     refreshImageLayer(layer: string): void;
