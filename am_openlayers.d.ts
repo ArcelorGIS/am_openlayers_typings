@@ -16,6 +16,34 @@ declare class AppConfig {
     urlGISHome: string;
 }
 
+interface IRoadSearchService {
+        getDisplayData(): any;
+        getStartPoint(): any;
+        getEndPoint(): any;
+        getParameters(): any;
+        afterStartPointSelect(data: any, event: any): void;
+        afterEndPointSelect(data: any, event: any): void;
+        startSearch(): void;
+        getPosten(isStart: boolean): Array<any>;
+        getPoorten(isStart: boolean): Array<any>;
+        getGebouwen(isStart: boolean): Array<any>;
+        getGebouwByNummer(nummer: string, postvak?: string): ng.IPromise<any>;
+        getPersonen(isStart: boolean): Array<any>;
+        setPoint(x: number, y: number, startOrEnd: boolean, geometry?: string): void;
+        clearMarker(startOrEnd: boolean): void;
+        clearSearch(): void;
+        clearRoads(): void;
+        resetDisplayData(): void;
+        clearStartPoort(): void;
+        clearEndPoort(): void;
+        clearStartPost(): void;
+        clearEndPost(): void;
+        clearStartGebouw(): void;
+        clearEndGebouw(): void;
+        clearStartPersoon(): void;
+        clearEndPersoon(): void;
+}
+
 interface IDataTableService {
     getTabs(): Array<any>;
     getTab(tabName: string): any;
