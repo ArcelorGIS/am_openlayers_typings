@@ -16,6 +16,10 @@ declare class AppConfig {
     urlGISHome: string;
 }
 
+interface IConfigLoaderService {
+        getConfigData(application?: string): any;
+    }
+
 interface IRoadSearchService {
         getDisplayData(): any;
         getStartPoint(): any;
