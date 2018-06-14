@@ -34,7 +34,7 @@ interface IRoadSearchService {
         getGebouwen(isStart: boolean): Array<any>;
         getGebouwByNummer(nummer: string, postvak?: string): ng.IPromise<any>;
         getPersonen(isStart: boolean): Array<any>;
-        setPoint(x: number, y: number, startOrEnd: boolean, geometry?: string): void;
+        setPoint(x: number, y: number, startOrEnd: boolean, geometry?: string, projection?: string): void;
         clearMarker(startOrEnd: boolean): void;
         clearSearch(): void;
         clearRoads(): void;
