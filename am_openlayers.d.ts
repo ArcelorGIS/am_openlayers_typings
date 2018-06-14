@@ -27,8 +27,8 @@ interface IRoadSearchService {
         getParameters(): any;
         afterStartPointSelect(data: any, event: any): void;
         afterEndPointSelect(data: any, event: any): void;
-        startSearchNoExtent(): void;
-        startSearch(): void;
+        startSearchNoExtent(projection?: string): void;
+        startSearch(projection?: string): void;
         getPosten(isStart: boolean): Array<any>;
         getPoorten(isStart: boolean): Array<any>;
         getGebouwen(isStart: boolean): Array<any>;
