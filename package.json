@@ -1,0 +1,20 @@
+{
+    "name": "name",
+    "version": "0.0.2",
+    "homepage": "github:ArcelorGIS/am_openlayers_typings",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github:ArcelorGIS/am_openlayers_typings.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github:ArcelorGIS/am_openlayers_typings/issues"
+    },
+    "engines": {
+        "node": ">=7.8.0"
+    },
+    "scripts": {
+    },
+    "devDependencies": {
+    }
+}
