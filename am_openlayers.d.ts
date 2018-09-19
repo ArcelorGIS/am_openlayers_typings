@@ -143,6 +143,7 @@ interface IInteractionService {
     clearAnnotations(): void;
     getEnabledInteractions(): any;
     StartPlacement(type: ol.geom.GeometryType, afterPlace: (feature: ol.Feature) => void): void;
+    StartPlacementEvent(type: any, afterPlace: (feature: ol.Feature) => void, beforePlace: (feature: ol.Feature) => void): void;
 }
 
 interface ILogOnService {
