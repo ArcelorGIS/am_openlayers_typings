@@ -12,6 +12,7 @@ declare class AppConfig {
     urlgeorest: string;
     urldijkstraservice: string;
     urlAssetsApi: string;
+    urlFabApi: string;
     urlmapguideservice: string;
     urlGISHome: string;
 }
@@ -275,6 +276,7 @@ interface IMapFilterService {
 }
 
 interface ILayerFilterService {
+    SetfilterUrl(url: string): void;
     AddFilterData(layer: string): void;
     GetFilterData(): any;
     ApplyFilters(): void;
